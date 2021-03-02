@@ -40,12 +40,14 @@ namespace Przychodnia
         static void Main(string[] args)
         {
             string haslo = "";
+            Console.WriteLine("Podaj hasło: ");
+            haslo = Console.ReadLine();
             while (haslo != "hasloprzychodnia")
             {
-                Console.WriteLine("Podaj haslo: ");
+                Console.WriteLine("Złe hasło! Podaj poprawne hasło: ");
                 haslo = Console.ReadLine();
             }
-            Console.WriteLine("Haslo poprawne");
+            Console.WriteLine("Hasło poprawne");
             int choice = 0;
             List<Doctor> doctors = new List<Doctor>();
             List<Patient> patients = new List<Patient>();
@@ -122,7 +124,7 @@ namespace Przychodnia
                         }
                         else
                         {
-                            Console.WriteLine("Za malo / duzo cyfr!");
+                            Console.WriteLine("Za mało / dużo cyfr!");
                             badFormat = true;
                         }
                     }
