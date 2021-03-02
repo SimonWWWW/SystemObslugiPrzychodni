@@ -114,7 +114,7 @@ namespace Przychodnia
                     badFormat = false;
                     try
                     {
-                        long pesel = int.Parse(Console.ReadLine());
+                        long pesel = Int64.Parse(Console.ReadLine());
                         string peselLength = (pesel.ToString());
                         if (peselLength.Length == 11)
                         {
@@ -161,7 +161,7 @@ namespace Przychodnia
                 {
                     foreach (Patient aPatient in patients)
                     {
-                        Console.WriteLine("{0}\n", aPatient);
+                        Console.WriteLine("{0,20}\n", aPatient);
                     }
                     menu();
                 }
@@ -169,7 +169,7 @@ namespace Przychodnia
             void addingVisitsToPatients()
             {
                 Console.WriteLine("Wpisz pesel pacjenta którego chcesz umówić na wizytę: ");
-                long inputPesel = int.Parse(Console.ReadLine());
+                long inputPesel = Int64.Parse(Console.ReadLine());
                 Console.WriteLine("Wpisz ID lekarza do którego chcesz umówić wizyte: ");
                 int inputId = int.Parse(Console.ReadLine());
                 Console.WriteLine("Podaj date wizyty dd-mm-rrrr: ");
@@ -183,15 +183,15 @@ namespace Przychodnia
                 Console.WriteLine();
                 foreach (var x in listFilteredPatients)
                 {
-                    Console.WriteLine("{0}", x);
+                    Console.WriteLine("{0,20}", x);
                 }
                 foreach (var x in visits)
                 {
-                    Console.WriteLine("{0}", x);
+                    Console.WriteLine("{0,20}", x);
                 }
                 foreach (var x in listFilteredDoctors)
                 {
-                    Console.WriteLine("{0}", x);
+                    Console.WriteLine("{0,20}", x);
                 }
                 Console.WriteLine("Dodano wizyte!");
                 Console.WriteLine();
@@ -212,7 +212,7 @@ namespace Przychodnia
                 {
                     foreach (Patient person in listFiltered)
                     {
-                        Console.WriteLine("{0}\n", person);
+                        Console.WriteLine("{0,20}\n", person);
                     }
                     menu();
                 }
@@ -229,7 +229,7 @@ namespace Przychodnia
                     Console.Clear();
                     foreach (object visit in visitsWithPatientsAndDoctors)
                     {
-                        Console.WriteLine("{0}\n", visit);
+                        Console.WriteLine("{0,20}\n", visit);
                     }
                     menu();
                 }
@@ -276,7 +276,7 @@ namespace Przychodnia
                 {
                     foreach (Doctor aDoctor in doctors)
                     {
-                        Console.WriteLine("{0}\n", aDoctor);
+                        Console.WriteLine("{0,20}\n", aDoctor);
                     }
                     menu();
                 }
